@@ -1,12 +1,12 @@
 # phantom-wd
 
-A webdriver (using [wd](https://github.com/admc/wd)) wrapper around [PhantomJS]().
+A webdriver (using [wd](https://github.com/admc/wd)) wrapper around [PhantomJS](http://phantomjs.org/).
 
 PhantomJS must be installed and available on the `PATH` for this package to work.
 
 ## Usage
 
-``javascript
+```javascript
 var phantom = require("phantom-wd");
 
 var browserPromise = phantom({
