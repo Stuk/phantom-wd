@@ -19,16 +19,16 @@ var browserPromise = phantom({
 ```javascript
 browserPromise
 .then(function (browser) {
-    return browser.get("http://google.com/")
+    return browser.get("http://admc.io/wd/test-pages/guinea-pig.html")
     .then(function () {
-        return browser.execute("return window.title");
+        return browser.execute("return document.title");
     })
     .then(function (title) {
-        console.log(title);
+        expect(title).toEqual("WD Tests");
 
         // This both shuts down the webdriver connection and kills PhantomJS
-        return browser.quit()
-    })
+        return browser.quit();
+    });
 })
 .done();
 ```
