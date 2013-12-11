@@ -1,0 +1,30 @@
+{
+  "name": "phantom-wd",
+  "version": "0.0.1",
+  "description": "A webdriver wrapper around PhantomJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stuk/phantom-wd.git"
+  },
+  "keywords": [
+    "webdriver",
+    "wd",
+    "phantomjs"
+  ],
+  "author": "Stuart Knightley <stuart@stuartk.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Stuk/phantom-wd/issues"
+  },
+  "dependencies": {
+    "q": "~0.9.7",
+    "wd": "~0.2.6"
+  },
+  "devDependencies": {
+    "jasmine-node": "~1.11.0"
+  }
+}
