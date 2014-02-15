@@ -19,7 +19,7 @@ module.exports = function phantom(config) {
     // GhostDriver is ready to recieve commands after this text has appeared
     // in the output stream
     phantomProc.stdio[1].pipe(new SearchStream({
-        match: "GhostDriver - Main - running",
+        match: "port " + config.port,
         matchedCallback: started.resolve,
         out: config.debug ? process.stdout : void 0
     }));
