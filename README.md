@@ -10,14 +10,15 @@ PhantomJS must be installed and available on the `PATH` for this package to work
 var phantom = require("phantom-wd");
 
 var browserPromise = phantom({
-    debug: false       // boolean, console.log Phantom output
+    debug: false       // boolean, console.log PhantomJS output
+    port:  8910        // number, which port PhantomJS should listen on
 });
 ```
 
 `browserPromise` is a promise for `wd.promiseRemote`.
 
 ```javascript
-browserPromise
+phantom()
 .then(function (browser) {
     return browser.get("http://admc.io/wd/test-pages/guinea-pig.html")
     .then(function () {

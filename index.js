@@ -9,9 +9,10 @@ var SearchStream = require("./search-stream");
  */
 module.exports = function phantom(config) {
     config = config || {};
+    config.port = config.port ? parseInt(config.port, 10) : 8910;
     var started = Q.defer();
 
-    var phantomProc = spawn("phantomjs", ["--webdriver=127.0.0.1:8910"], {
+    var phantomProc = spawn("phantomjs", ["--webdriver=127.0.0.1:" + config.port], {
         stdio: ['ignore', 'pipe', config.debug ? process.stderr : 'ignore']
     });
 
@@ -23,7 +24,7 @@ module.exports = function phantom(config) {
         out: config.debug ? process.stdout : void 0
     }));
 
-    var browser = wd.promiseRemote("127.0.0.1", 8910);
+    var browser = wd.promiseRemote("127.0.0.1", config.port);
 
     // Kill phantom when the browser is quit
     var originalQuit = browser.quit;
