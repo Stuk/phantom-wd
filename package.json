@@ -1,6 +1,6 @@
 {
   "name": "phantom-wd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A webdriver wrapper around PhantomJS",
   "main": "index.js",
   "scripts": {
