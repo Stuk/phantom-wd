@@ -1,6 +1,6 @@
 {
   "name": "phantom-wd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A webdriver wrapper around PhantomJS",
   "main": "index.js",
   "scripts": {
@@ -21,10 +21,10 @@
     "url": "https://github.com/Stuk/phantom-wd/issues"
   },
   "dependencies": {
-    "q": "~0.9.7",
-    "wd": "~0.2.6"
+    "q": "^1.5.0",
+    "wd": "^1.2.0"
   },
   "devDependencies": {
-    "jasmine-node": "~1.11.0"
+    "jasmine-node": "^1.14.5"
   }
 }
